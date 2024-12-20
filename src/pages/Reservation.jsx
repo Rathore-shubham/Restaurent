@@ -1,4 +1,4 @@
-Reservations.jsx
+
 import { useState, useEffect } from "react";
 import TableReservation from "../components/TableReservation";
 import { getReservations, createReservation } from "../apiService";

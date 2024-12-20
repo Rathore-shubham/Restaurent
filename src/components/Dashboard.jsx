@@ -1,4 +1,4 @@
-Dashboard.jsx
+// Dashboard.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -12,6 +12,7 @@ const Dashboard = () => {
             if (!token) return;
 
             try {
+                // Fetch user role and content from backend based on the role
                 const res = await axios.get(`/api/${role}/dashboard`, { headers: { 'x-auth-token': token } });
                 setRole(res.data.role);
                 setContent(res.data.msg);
